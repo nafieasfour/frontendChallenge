@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 30px;
+}
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.MainPhoto {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+}
+.Thumbnails {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.ThumbnailsPhoto {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.rightSide {
+  align-items: baseline;
+}
+.profuctInfo {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.companyName {
+  font-size: 10px;
+  color: grey;
+  padding-bottom: 10px;
+}
+.productName {
+  font-weight: bolder;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.productDesc {
+  color: grey;
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+.price {
+  display: flex;
+  flex: row;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.discountedPrice {
+  font-weight: bold;
+}
+.disountAmount {
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.normalPrice {
+  text-decoration: line-through;
+  color: grey;
+  padding-bottom: 10px;
+}
+.interaction {
+  display: flex;
+  flex-direction: row;
+}
+.quantityButtons {
+  background-color: rgb(225, 234, 243);
+  width: 100px;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4px;
+  padding-right: 4px;
+  align-items: center;
+}
+.plusButton {
+  color: rgba(252, 167, 7, 0.97);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+.AddButton {
+  background-color: rgb(255, 167, 2);
+  font-weight: bold;
+  color: black;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+}

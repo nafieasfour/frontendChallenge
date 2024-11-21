@@ -1,0 +1,6 @@
+.hrLine {
+  border: none;
+  border-top: 2px solid #ccc;
+  width: 60%;
+  margin: 20px auto; /* Centers the line horizontally and adds spacing */
+}
