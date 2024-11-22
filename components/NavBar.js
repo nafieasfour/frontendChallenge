@@ -1,8 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Cart from "./Cart";
 import styles from "./NavBar.module.css";
 
 export default function NavBar() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
+
   return (
     <div className={styles.container}>
       <div className={styles.leftSide}>
@@ -31,12 +36,19 @@ export default function NavBar() {
         </ul>
       </div>
       <div className={styles.rightSide}>
-        <img src="/images/icon-cart.svg" className={styles.cartImage}></img>
+        <img
+          src="/images/icon-cart.svg"
+          className={styles.cartImage}
+          onClick={toggleCart}
+          alt="Cart Icon"
+        />
         <img
           src="/images/image-avatar.png"
           className={styles.avatarImage}
-        ></img>
+          alt="Avatar"
+        />
       </div>
+      {isCartOpen && <Cart />}
     </div>
   );
 }
