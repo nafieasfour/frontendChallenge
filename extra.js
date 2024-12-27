@@ -18,3 +18,4 @@ export default function Home() {
 }
 //index.js ends
 
+onclick="toggleMenu()"

@@ -38,4 +38,54 @@
   height: 50px;
   width: 50px;
 }
+@media (min-width: 375px) {
+  .menuIcon {
+    display: none;
+  }
+}
 
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 320px;
+    height: 150px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .leftSide,
+  .rightSide {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo {
+    width: 100;
+    height: 35px;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .cartImage {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .avatarImage {
+    display: block;
+  }
+  .menuIcon {
+    display: block;
+    width: 50px;
+    height: 30px;
+  }
+  .menuIconPhoto {
+    height: 40px;
+    width: auto;
+  }
+}

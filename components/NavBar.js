@@ -8,14 +8,42 @@ export default function NavBar() {
 
   const toggleCart = () => setIsCartOpen(!isCartOpen);
 
+  //This code for small screen start
+  // function StateChangerBasedonUI() {
+  //   const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  //   useEffect(() => {
+  //     const checkScreenSize = () => {
+  //       setIsSmallScreen(window.innerWidth < 375);
+  //     };
+
+  //     checkScreenSize();
+  //     window.addEventListener("resize", checkScreenSize);
+
+  //     return () => window.removeEventListener("resize", checkScreenSize);
+  //   }, []);
+  // }
+
+  // //This code for small screen end
+
   return (
     <div className={styles.container}>
       <div className={styles.leftSide}>
+        <button className={styles.menuIcon}>
+          <Image
+            src={"/images/icon-menu.svg"}
+            className={styles.menuIconPhoto}
+            width={50}
+            height={50}
+            alt="icon"
+          ></Image>
+        </button>
         <Image
           src={"/images/logo.svg"}
           width={200}
           height={30}
           className={styles.logo}
+          alt="icon2"
         ></Image>
         <ul className={styles.list}>
           <li>

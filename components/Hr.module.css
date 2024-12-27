@@ -4,3 +4,9 @@
   width: 60%;
   margin: 20px auto;
 }
+
+@media (max-width: 375px) {
+  .hrLine {
+    display: none;
+  }
+}

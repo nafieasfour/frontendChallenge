@@ -111,3 +111,8 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+@media (max-width: 375px) {
+  .container{
+  display: none;}
+}
