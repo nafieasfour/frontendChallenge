@@ -4,7 +4,9 @@ import styles from "./ProductCard.module.css";
 import { useCart } from "../context/CartContext";
 
 export default function ProductCard() {
-  const [mainImage, setMainImage] = useState("/images/image-product-1.jpg");
+  const [mainImage, setMainImage] = useState("/images/image-product-1.jpg"); //encode the image into base64
+  //avoid base64 if it's not neccessary
+  // image-product-1.jpg should be dynamic
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [quantity, setQuantity] = useState(0);
 

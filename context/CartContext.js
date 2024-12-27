@@ -25,6 +25,7 @@ export function CartProvider({ children }) {
         addItemToCart,
         removeItemFromCart,
         cartOpen,
+        setCartOpen,
         toggleCart,
       }}
     >

@@ -2,29 +2,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Cart from "./Cart";
 import styles from "./NavBar.module.css";
+import { useCart } from "../context/CartContext";
 
 export default function NavBar() {
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  //const [cartOpen, setcartOpen] = useState(false);
+  const { cartOpen, setCartOpen } = useCart();
 
-  const toggleCart = () => setIsCartOpen(!isCartOpen);
-
-  //This code for small screen start
-  // function StateChangerBasedonUI() {
-  //   const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  //   useEffect(() => {
-  //     const checkScreenSize = () => {
-  //       setIsSmallScreen(window.innerWidth < 375);
-  //     };
-
-  //     checkScreenSize();
-  //     window.addEventListener("resize", checkScreenSize);
-
-  //     return () => window.removeEventListener("resize", checkScreenSize);
-  //   }, []);
-  // }
-
-  // //This code for small screen end
+  const toggleCart = () => setCartOpen(!cartOpen);
 
   return (
     <div className={styles.container}>
@@ -64,7 +48,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className={styles.rightSide}>
-        <img
+        <img //better to add the two image in one div becasue its default display is inline.
           src="/images/icon-cart.svg"
           className={styles.cartImage}
           onClick={toggleCart}
@@ -76,7 +60,7 @@ export default function NavBar() {
           alt="Avatar"
         />
       </div>
-      {isCartOpen && <Cart />}
+      {cartOpen && <Cart />}
     </div>
   );
 }

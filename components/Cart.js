@@ -8,9 +8,9 @@ export default function Cart() {
   const handleDelete = (index) => {
     removeItemFromCart(index);
   };
-
+  //console.log(cartOpen)
   return (
-    { cartOpen } && (
+    cartOpen && (
       <div className={styles.cartContainer}>
         <h3 className={styles.cartTitle}>Cart</h3>
         <div>
